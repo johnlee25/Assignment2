@@ -1,0 +1,112 @@
+<!-- setup the html page -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- set the head of the page with all links and data -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPSCI 4WW3 Project</title>
+    <!-- import font styling -->
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Open+Sans:400,700" rel="stylesheet">
+    <!-- import in a font class for icons -->
+    <link rel="stylesheet" href="fontawesome-free-5.11.2-web\css\all.css">
+    <!-- import my css  -->
+    <link rel="stylesheet" href="css/styles-search.css">
+    <!-- import javascript -->
+    <script src="javascript/search-add.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRl8_qQgedf4NJCfpoMHSF-J79nMkZ2Wc&callback=initMap"></script>
+</head>
+<!-- this is where the content goes -->
+
+<body>
+    <!--  HEADER -->
+    <header>
+        <!-- my navigation bar header to nav between pages -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="search.html">Search</a>
+            <div class="dropdownbar">
+                <a class="dropbtn">USER</a>
+                <div class="dropdown-content">
+                    <a href="login.html">Login</a>
+                    <a href="registration.html">Signup</a>
+                </div>
+            </div>
+        </nav>
+        <!-- created a container to better control and position my header content including icons and text title -->
+        <div class="header-container">
+            <picture>
+                <source media="(min-width: 650px)" srcset="images\logo.png" class="profile-img">
+                <img src="images\logo.png" alt="logo" class="profile-img floater">
+            </picture>
+            <h2 id="header-content">Welcome To John Lee's Toronto Landmarks</h2>
+            <picture>
+                <source media="(min-width: 650px)" srcset="images\logo.png" class="profile-img">
+                <img src="images\logo.png" alt="logo" class="profile-img">
+            </picture>
+        </div>
+    </header>
+
+    <!-- create a class to control positioning of my page header/title/intro -->
+    <div class="searchhead">
+        <h1>Search for a landmark</h1>
+        <p>Enter either the name of the landmark or choose a rating below</p>
+        <!-- create line to improve the overall look of page -->
+        <hr>
+    </div>
+
+    <!-- this div class will allow me to control the positioning of the contents on my page -->
+    <div class="search-container">
+        <!-- div container to help adjust the content width -->
+        <div class="adjust">
+            <!-- create form to hold all my form content, also direct it to the results_sample page when clicking submit -->
+            <form action="results_sample.html" method="GET">
+                <!-- the following are headings/titles followed by a input section for users to input data -->
+                <label for="search"><b>Search by Landmark</b></label>
+                <input type="search" placeholder="Enter Landmark" name="search">
+                <label for="location"><b>Search by Location</b></label>
+                <!-- press this button to get your location -->
+                <button type="button" class="locbtn" alt="Get my Location"><i class="fas fa-location-arrow"
+                        onclick="getLocation()"></i></button>
+                <input type="search" placeholder="Enter Address" name="address" id="locaddress"><br>
+                <input type="search" placeholder="Enter Longitude" name="longitude" id="loclong">
+                <input type="search" placeholder="Enter Latitude" name="latitude" id="loclat">
+                <label for="rating"><b>Search by Rating</b></label>
+                <!-- create another div class to control the drop down menu -->
+                <div>
+                    <!-- allow users to select a rating from a drop down menu -->
+                    <select name="rating">
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <!-- id to control the button positioning, class in the button to control the look, submit button to input the form data -->
+                <div id="buttonadjust">
+                    <input type="submit" value="SEARCH" class="submitbtn">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- // Footer & contact info -->
+    <footer>
+        <div>
+            <h2>Let's Keep in Touch!</h2>
+            <!-- Social media and contact links -->
+            <div class="contact-info">
+                <a href="mailto:leej91@mcmaster.ca">E-Mail</a>
+                <a href="https://www.linkedin.com/in/john-lee-557452103/" target="_blank">LinkedIn</a>
+            </div>
+            <p>Copyright 2019 by John Lee</p>
+        </div>
+    </footer>
+</body>
+
+</html>

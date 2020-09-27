@@ -1,0 +1,199 @@
+<!-- setup the html page -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- set the head of the page with all links and data -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPSCI 4WW3 Project</title>
+    <!-- import font styling -->
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Open+Sans:400,700" rel="stylesheet">
+    <!-- import in a font class for icons -->
+    <link rel="stylesheet" href="fontawesome-free-5.11.2-web\css\all.css">
+    <!-- import my css  -->
+    <link rel="stylesheet" href="css/styles-page.css">
+    <!-- import javascript -->
+    <script src="javascript/object.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRl8_qQgedf4NJCfpoMHSF-J79nMkZ2Wc&callback=initMap"></script>
+</head>
+<!-- this is where the content goes -->
+
+<body>
+    <!--  HEADER -->
+    <header>
+        <!-- my navigation bar header to nav between pages -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="search.html">Search</a>
+            <div class="dropdownbar">
+                <a class="dropbtn">USER</a>
+                <div class="dropdown-content">
+                    <a href="login.html">Login</a>
+                    <a href="registration.html">Signup</a>
+                </div>
+            </div>
+        </nav>
+        <!-- created a container to better control and position my header content including icons and text title -->
+        <div class="header-container">
+            <picture>
+                <source media="(min-width: 650px)" srcset="images\logo.png" class="profile-img">
+                <img src="images\logo.png" alt="logo" class="profile-img floater">
+            </picture>
+            <h2 id="header-content">Welcome To John Lee's Toronto Landmarks</h2>
+            <picture>
+                <source media="(min-width: 650px)" srcset="images\logo.png" class="profile-img">
+                <img src="images\logo.png" alt="logo" class="profile-img">
+            </picture>
+        </div>
+    </header>
+
+    <!-- class to set the body header to center -->
+    <div class="objectpage">
+        <h1>Raptors Hands</h1>
+        <hr>
+    </div>
+
+    <!-- div container used to control the body layout -->
+    <div class="page-container">
+        <!-- div container used to control the media layout -->
+        <div class="picture-adjust">
+            <picture>
+                <source media="(min-width: 650px)" srcset="images\raptorshands.jpg" class="avsize">
+                <img src="images\raptorshands.jpg" alt="picture" class="avsize">
+            </picture>
+            <!-- Video will become part of slideshow once javascript is used -->
+            <video class="avsize" controls>
+                <source src="images\mov_bb.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <!-- div container used to control the landmark information layout -->
+        <div class="description">
+            <form>
+                <label for="name"><b>Name</b></label>
+                <p>Raptors Hands</p>
+                <label for="rating"><b>Rating</b></label>
+                <p>5/5</p>
+                <label for="address"><b>Address</b></label>
+                <p>60 Queen St W</p>
+                <label for="coord"><b>Coordinates</b></label>
+                <p>Longitude: -79.381651 <br>Latitude: 43.651865</p>
+                <label for="date"><b>Date Added</b></label>
+                <p>2019-10-03</p>
+                <label for="desc"><b>Description</b></label>
+                <p>Pair of hands most likely belonging to Kawhi Leonard celebrating the 25 years of Raptors basketball
+                    in
+                    Toronto. Times were tough before Kawhi. Times will no doubt be tougher after he leaves, but no one
+                    can take the 2019 NBA championship from this city. </p>
+            </form>
+        </div>
+        <!-- div container used to control the map layout -->
+        <div id="map-sample">
+        </div>
+        <!-- div container used to control the review layout -->
+        <div class="reviews">
+            <!-- this will be the stars that was imported above -->
+            <span class="heading">User Rating</span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <p>4.5 average based on 404 reviews.</p>
+            <hr class="reviewbar">
+
+            <!-- in order it goes which star, the stars bar and the number of ratings -->
+            <div class="row">
+                <div class="side">
+                    <div>5 star</div>
+                </div>
+                <div class="middle">
+                    <div class="bar-container">
+                        <div class="bar-5"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div>300</div>
+                </div>
+                <div class="side">
+                    <div>4 star</div>
+                </div>
+                <div class="middle">
+                    <div class="bar-container">
+                        <div class="bar-4"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div>63</div>
+                </div>
+                <div class="side">
+                    <div>3 star</div>
+                </div>
+                <div class="middle">
+                    <div class="bar-container">
+                        <div class="bar-3"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div>15</div>
+                </div>
+                <div class="side">
+                    <div>2 star</div>
+                </div>
+                <div class="middle">
+                    <div class="bar-container">
+                        <div class="bar-2"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div>6</div>
+                </div>
+                <div class="side">
+                    <div>1 star</div>
+                </div>
+                <div class="middle">
+                    <div class="bar-container">
+                        <div class="bar-1"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div>20</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- same div class used to control the reviews by others -->
+        <div class="description">
+            <form>
+                <label for="review"><b>Jason | 5/5</b></label>
+                <p>Great place for pictures at night!!!</p>
+                <label for="review"><b>Jamie | 5/5</b></label>
+                <p>Lovely pair of hands showing 25 years of raptors basketball</p>
+                <br>
+                <!-- label and textbox used to create your own review -->
+                <label for="reviewbox"><b>Place a Review</b></label><br>
+                <textarea name="reviewbox" placeholder="Input Review Here"></textarea>
+                <div id="buttonadjust">
+                    <input type="submit" value="SUBMIT" class="submitbtn">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- // Footer & contact info -->
+    <footer>
+        <div>
+            <h2>Let's Keep in Touch!</h2>
+            <!-- Social media and contact links -->
+            <div class="contact-info">
+                <a href="mailto:leej91@mcmaster.ca">E-Mail</a>
+                <a href="https://www.linkedin.com/in/john-lee-557452103/" target="_blank">LinkedIn</a>
+            </div>
+            <p>Copyright 2019 by John Lee</p>
+        </div>
+    </footer>
+</body>
+
+</html>

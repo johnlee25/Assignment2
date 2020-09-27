@@ -1,0 +1,258 @@
+/* HEADER */
+
+.profile-img{ /* Settings for my 2 icons, this makes it round and red the right size*/
+    border-radius: 50%;
+    background-color: #EF233C;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.header-container { /*created an container to help position the contents in the header */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+.floater{ /*this class is used to float the icon to the left when in iphone mode */
+    float: left;
+}
+
+#header-content{/* this lets everything be the same length regardless of content*/
+    flex: 1
+}
+
+a{ /* set the color of my links */
+    color:#EF233C;
+}
+
+a:hover{ /* remove the text decoration when I hover over */
+    text-decoration: none;
+}
+
+
+
+nav { /*container to help control my nav positioning */
+    text-align: center;
+    background: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav a{ /* this part controls the links*/
+    display: inline-block;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.dropdownbar{ /* for the dropdown bar float it to the right and set over flow to hidden*/
+    float: right;
+    overflow: hidden;
+}
+
+.dropdownbar .dropbtn{ /* this will change the look of the box and positioning*/
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    background-color: inherit;
+    margin: 0;
+}
+
+.dropdown-content { /* this changes the look and positioning of the content in the box*/
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a { /* changes how the content links looks */
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover { /* give a hover effect*/
+    background-color: #ddd;
+}
+  
+/* Show the dropdown menu on hover */
+.dropdownbar:hover .dropdown-content {
+    display: block;
+}
+
+header { /* the actual header, create some padding so its not so tight and it creates the color background*/
+    padding-top: 50px;
+    position: relative;
+    background: #2b2d42;
+}
+
+
+@media (max-width: 899px){ /* center the header when content gets smaller, could probably do without this part*/
+    header {
+        text-align: center;
+    }
+}
+
+header h2{ /*set the headers content color*/
+    color: #EDF2F4;
+    margin: 0;
+}
+
+/* BODY */
+
+body{ /* set the text of my body content*/
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+h1,h2{ /* set the text of the headers i use, since I want a consistant look on all my pages I will keep both regardless if i use on this page*/
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+}
+
+h2{ /* set the size of the header to 40px*/
+    font-size:40px;
+    margin-top: 0;
+}
+
+
+
+/* FOOTER */
+footer{ /* container for the contents in my footer, set the height and color */
+    text-align: center;
+    height:130px;
+    background: #2b2d42;
+
+}
+
+.contact-info a{ /* set how i want my footer content to look and feel */
+    padding: 10px;
+    display: inline-block;
+}
+
+footer h2{ /*set the margin in the h2 in the footer to 0 to save space*/
+    margin:0;
+}
+
+footer p{ /*set the margin in the p in the footer to 0 to save space*/
+    margin:0;
+}
+
+/* GENERAL */
+html{ /* Use to apply a natural box layout model to all elements but allow components to change */
+    box-sizing: border-box;
+}
+
+ *, *:before, *:after{ /* adjust the box size for before and after properties*/
+    box-sizing: inherit;
+}
+
+/* MAIN */
+.login { /* center the body header  */
+    text-align: center;
+}
+
+hr { /* set the hr line to red and add space under */
+    border: 1px solid #f34a4a;
+    margin-bottom: 25px;
+}
+
+input[type=email], input[type=password]{ /* set the look and size of the input text fields */
+    width: 25%;
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    border: none;
+}
+
+input[type=email]:focus, input[type=password]:focus { /* give the text input bars an effect  */
+    background-color: #ddd;
+    outline: none;
+  }
+input[type=radio]{ /* change the font size of the radio buttons */
+    font-size: 2px;
+}
+
+.submitbtn { /* set the submit button to green */
+    background-color: #4CAF50;
+}
+  
+input[type=submit]:hover,input[type=reset]:hover { /* give the buttons a hover effect */
+    opacity:1;
+}
+
+  
+.clearbtn { /* set the clear button to red */
+    background-color: #f44336;
+}
+  
+.clearbtn, .submitbtn { /* classes used to adjust the look and feel of the buttons*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7%;
+    margin: 0px 2px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 13px;
+  }
+  
+
+.log-container { /* add space under the content  */
+    margin: 0px 0px 7% 0px;
+
+    overflow: auto;
+}
+
+.adjust{ /* class used to adjust the size the content took up */
+    width: 25%;
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    border: none;
+}  
+
+div{ /* delete all space around the div */
+    padding:0;
+    margin: 0;
+}
+
+#txtsize{ /* id used to change the text size */
+    font-size: 14px;
+}
+#buttonadjust{ /* id used to control the placement of the buttons*/
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+  
+
+  
+@media (max-width: 375px){ /* used to control the look of site on iphone 7 screen sizes */
+    .adjust {
+        width:100%;
+    }
+    .log-container {
+        padding: 0px;
+    }
+    input[type=email], input[type=password]{
+        width: 100%;
+    }
+    .clearbtn, .submitbtn {
+        width: 50%;
+
+      }
+}
