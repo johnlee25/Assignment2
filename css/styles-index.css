@@ -1,0 +1,123 @@
+/* HEADER */
+
+.profile-img{ /* Settings for my 2 icons, this makes it round and red the right size*/
+    border-radius: 50%;
+    background-color: #EF233C;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.header-container { /*created an container to help position the contents in the header */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+.floater{ /*this class is used to float the icon to the left when in iphone mode */
+    float: left;
+}
+
+#header-content{/* this lets everything be the same length regardless of content*/
+    flex: 1
+}
+
+
+header { /* the actual header, create some padding so its not so tight and it creates the color background*/
+    padding-top: 10px;
+    position: relative;
+    background: #2b2d42;
+}
+
+
+@media (max-width: 899px){ /* center the header when content gets smaller, could probably do without this part*/
+    header {
+        text-align: center;
+    }
+}
+
+header h2{ /*set the headers content color*/
+    color: #EDF2F4;
+    margin: 0;
+}
+
+/* BODY */
+
+body{ /* set the text of my body content*/
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+h1,h2{ /* set the text of the headers i use, since I want a consistant look on all my pages I will keep both regardless if i use on this page*/
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+}
+
+h2{ /* set the size of the header to 40px*/
+    font-size:40px;
+    margin-top: 0;
+}
+
+
+
+/* FOOTER */
+footer{ /* container for the contents in my footer, set the height and color */
+    text-align: center;
+    height:180px;
+    background: #2b2d42;
+
+}
+
+.contact-info a{ /* set how i want my footer content to look and feel */
+    padding: 10px;
+    display: inline-block;
+}
+
+footer h2{ /*set the margin in the h2 in the footer to 0 to save space*/
+    margin:0;
+}
+
+footer p{ /*set the margin in the p in the footer to 0 to save space*/
+    margin:0;
+}
+
+/* GENERAL */
+html{ /* Use to apply a natural box layout model to all elements but allow components to change */
+    box-sizing: border-box;
+}
+
+ *, *:before, *:after{ /* adjust the box size for before and after properties*/
+    box-sizing: inherit;
+}
+
+/* MAIN */
+.index{ /* class used to center the body header */
+    text-align: center;
+}
+
+hr { /* line used to seperate the body header and the body content */
+    border: 1px solid #f34a4a;
+    margin-bottom: 25px;
+}
+.main-container { /* container used for the body*/
+    margin: 5% 0 10% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0 auto;
+    overflow: auto;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1501px){
+
+}

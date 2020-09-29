@@ -6,50 +6,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMPSCI 4WW3 Project</title>
+    <title>COMPSCI 4HC4 Assignment 2</title>
     <!-- import font styling -->
     <link href="https://fonts.googleapis.com/css?family=Caveat|Open+Sans:400,700" rel="stylesheet">
-    <!-- import in a font class for icons -->
-    <link rel="stylesheet" href="fontawesome-free-5.11.2-web\css\all.css">
     <!-- import my css  -->
-    <link rel="stylesheet" href="css/styles-main.css">
+    <link rel="stylesheet" href="css/styles-index.css">
     <!-- import javascript -->
-    <script src="javascript/search-results-main.js"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRl8_qQgedf4NJCfpoMHSF-J79nMkZ2Wc&callback=initMap"></script>
+    <script src="javascript/script-index.js"></script>
 </head>
 <!-- this is where the content goes -->
 
-<body>
+
     <!--  HEADER -->
     <header>
-        <!-- my navigation bar header to nav between pages -->
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="search.html">Search</a>
-            <div class="dropdownbar">
-                <a class="dropbtn">USER</a>
-                <div class="dropdown-content">
-                    <a href="login.html">Login</a>
-                    <a href="registration.html">Signup</a>
-                </div>
-            </div>
-        </nav>
         <!-- created a container to better control and position my header content including icons and text title -->
         <div class="header-container">
             <picture>
                 <source media="(min-width: 650px)" srcset="images\logo.png" class="profile-img">
                 <img src="images\logo.png" alt="logo" class="profile-img floater">
             </picture>
-            <h2 id="header-content">Welcome To John Lee's Toronto Landmarks</h2>
+            <h2 id="header-content">App Name</h2>
             <picture>
                 <source media="(min-width: 650px)" srcset="images\logo.png" class="profile-img">
                 <img src="images\logo.png" alt="logo" class="profile-img">
             </picture>
         </div>
     </header>
-
+    <body>
     <!-- div class used to control the body header content -->
     <div class="index">
         <h1>Select a Landmark</h1>
@@ -58,45 +41,22 @@
 
     <!-- div class container to control the body -->
     <div class="main-container">
-        <!-- another div container to control the select bar -->
-        <div class="select-container">
-            <!-- div class used to adjust the box of the select tag -->
-            <div class="adjust">
-                <!-- the actual select tag and content -->
-                <select class="selection" size="15">
-                    <option>Tree of Height</option>
-                    <option>SAMPLE TEMP</option>
-                    <option onclick="window.location.href='individual_sample.html'">Raptors hands</option>
-                    <option>Happy Feet</option>
-                    <option>SAMPLE TEMP</option>
-                    <option>Ball of Light</option>
-                    <option>SAMPLE TEMP</option>
-                </select>
-            </div>
-            <!-- form for adding content -->
-            <div class="button-container">
-                <form action="submission.html" method="GET" id="buttonadjust">
-                    <input type="submit" value="ADD" class="addbtn">
-                </form>
-            </div>
-        </div>
-        <!-- div container to help control the map -->
-        <div id="map-results">
-        </div>
+        
     </div>
-
+    </body>
     <!-- // Footer & contact info -->
     <footer>
         <div>
-            <h2>Let's Keep in Touch!</h2>
+            <h2>Made by John Lee</h2>
             <!-- Social media and contact links -->
             <div class="contact-info">
+                <p>400030428</p>
+                <p>leej91</p>
                 <a href="mailto:leej91@mcmaster.ca">E-Mail</a>
-                <a href="https://www.linkedin.com/in/john-lee-557452103/" target="_blank">LinkedIn</a>
+                <p>Copyright 2020 by John Lee</p>
             </div>
-            <p>Copyright 2019 by John Lee</p>
         </div>
     </footer>
-</body>
+
 
 </html>
