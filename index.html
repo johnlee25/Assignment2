@@ -14,19 +14,17 @@
     <!-- import javascript -->
     <script src="javascript/script-index.js"></script>
 </head>
-<!-- this is where the content goes -->
+<!--  HEADER -->
+<header>
+    <!-- created a container to better control and position my header content including icons and text title -->
+    <div class="header-container">
 
+        <h2 id="header-content">Family Trivia Fun!!!</h2>
 
-    <!--  HEADER -->
-    <header>
-        <!-- created a container to better control and position my header content including icons and text title -->
-        <div class="header-container">
+    </div>
+</header>
 
-            <h2 id="header-content">Family Trivia Fun!!!</h2>
-
-        </div>
-    </header>
-    <body>
+<body>
 
     <!-- div class container to control the body -->
     <div class="main-container">
@@ -38,7 +36,23 @@
             <span class="close">&times;</span>
             <img class="modal-content" id="img01">
             <div id="caption"></div>
-          </div>
+        </div>
+        <script type="text/javascript">
+            var modal = document.getElementById("myModal");
+            var img2 = document.getElementById("pic");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img2.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+        </script>
+
         <form id="question">
             <label for="fname">Enter Name Here</label><br>
             <input type="text" id="fname" name="fname"><br>
@@ -46,20 +60,20 @@
         </form>
 
     </div>
-    </body>
-    <!-- // Footer & contact info -->
-    <footer>
-        <div>
-            <h2>Made by John Lee</h2>
-            <!-- Social media and contact links -->
-            <div class="contact-info">
-                <p>400030428</p>
-                <p>leej91</p>
-                <a href="mailto:leej91@mcmaster.ca">E-Mail</a>
-                <p>Copyright 2020 by John Lee</p>
-            </div>
+</body>
+<!-- // Footer & contact info -->
+<footer>
+    <div>
+        <h2>Made by John Lee</h2>
+        <!-- Social media and contact links -->
+        <div class="contact-info">
+            <p>400030428</p>
+            <p>leej91</p>
+            <a href="mailto:leej91@mcmaster.ca">E-Mail</a>
+            <p>Copyright 2020 by John Lee</p>
         </div>
-    </footer>
+    </div>
+</footer>
 
 
 </html>

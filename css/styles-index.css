@@ -62,8 +62,8 @@ html{ /* Use to apply a natural box layout model to all elements but allow compo
     justify-content: center;
     padding: 0 auto;
     flex: 1;
-
 }
+
 
 #pic {
     width:450px;
@@ -148,6 +148,7 @@ html{ /* Use to apply a natural box layout model to all elements but allow compo
       width: 100%;
     }
 }
+
 #question{
     padding-top: 20px;
 }
