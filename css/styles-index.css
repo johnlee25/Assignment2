@@ -6,11 +6,9 @@
     display: flex;
 }
 
-
 #header-content{/* this lets everything be the same length regardless of content*/
     flex: 1
 }
-
 
 header { /* the actual header, create some padding so its not so tight and it creates the color background*/
     padding-top: 25px;
@@ -18,9 +16,6 @@ header { /* the actual header, create some padding so its not so tight and it cr
     position: relative;
     background: #2b2d42;
 }
-
-
-
 
 header h2{ /*set the headers content color*/
     color: #EDF2F4;
@@ -44,7 +39,6 @@ h2{ /* set the size of the header to 40px*/
     margin-top: 0;
 }
 
-
 html{ /* Use to apply a natural box layout model to all elements but allow components to change */
     box-sizing: border-box;
 }
@@ -53,21 +47,17 @@ html{ /* Use to apply a natural box layout model to all elements but allow compo
     box-sizing: inherit;
 }
 
-
 .main-container { /* container used for the body*/
-    margin: 5% 0 10% 0;
+    margin: 0 0 5% 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 0 auto;
     flex: 1;
 }
 
-
 #pic {
-    width:450px;
-    height:350px;
+    width:435px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -141,47 +131,71 @@ html{ /* Use to apply a natural box layout model to all elements but allow compo
     text-decoration: none;
     cursor: pointer;
 }
-  
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
-    .modal-content {
-      width: 100%;
-    }
-}
 
 #question{
     padding-top: 20px;
 }
 
-
-/* FOOTER */
-footer{ /* container for the contents in my footer, set the height and color */
-    text-align: center;
-    height:180px;
-    background: #2b2d42;
-
+#submitbtn{
+    background-color: #4CAF50;
 }
 
-.contact-info a{ /* set how i want my footer content to look and feel */
-    padding: 10px;
-    display: inline-block;
+#nxtbtn{
+    background-color: #111111;
 }
 
-footer h2{ /*set the margin in the h2 in the footer to 0 to save space*/
-    margin:0;
+#resetbtn{
+    background-color: #39305c;
 }
 
-footer p{ /*set the margin in the p in the footer to 0 to save space*/
-    margin:0;
+#submitbtn{ 
+    width: 50%;
+    margin: 10px 25%;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 13px;
 }
 
+#resetbtn,#nxtbtn { 
+    width: 100%;
+    margin: 10px 0%;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 13px;
+}
 
-@media (max-width: 899px){ /* center the header when content gets smaller, could probably do without this part*/
-    header {
-        text-align: center;
+#submitbtn:hover,#nxtbtn:hover,#resetbtn:hover { /* give the buttons a hover effect */
+    opacity:1;
+}
+
+#nxtbtn,#resetbtn {
+    display: none;
+}
+
+#finalscr{
+    font-size: large;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
     }
 }
 
-@media (max-width: 1501px){
+@media (max-width: 0px){
+    #pic{
+        width:50%;
+    }
+}
 
+@media (max-width: 435px){
+    #pic{
+        width:100%;
+    }
 }

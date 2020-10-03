@@ -18,25 +18,23 @@
 <header>
     <!-- created a container to better control and position my header content including icons and text title -->
     <div class="header-container">
-
         <h2 id="header-content">Family Trivia Fun!!!</h2>
-
     </div>
 </header>
-
 <body>
-
     <!-- div class container to control the body -->
     <div class="main-container">
         <h3>What's Their Name?</h3>
         <script type="text/javascript">
             document.write(choosePic());
         </script>
+        <div id="finalscr"></div>
         <div id="myModal" class="modal">
             <span class="close">&times;</span>
             <img class="modal-content" id="img01">
             <div id="caption"></div>
         </div>
+        <div id="hint">Hover Over Image for Hint</div>
         <script type="text/javascript">
             var modal = document.getElementById("myModal");
             var img2 = document.getElementById("pic");
@@ -47,33 +45,27 @@
                 modalImg.src = this.src;
                 captionText.innerHTML = this.alt;
             }
-            var span = document.getElementsByClassName("close")[0];
-            span.onclick = function () {
+            modal.onclick = function () {
                 modal.style.display = "none";
             }
+            var hints = document.getElementById("hint");
+            img2.onmouseover = function () {
+                hints.textContent = this.alt;
+            }
+            img2.onmouseout = function () {
+                hints.textContent = "Hover Over Image for Hint";
+            }
         </script>
-
-        <form id="question">
-            <label for="fname">Enter Name Here</label><br>
+        <form id="question" onsubmit="return false">
+            <label id="etrname" for="fname">Enter Name Here</label><br>
             <input type="text" id="fname" name="fname"><br>
-            <input id="submit" name="submit" type="button" value="Submit" onclick="addQuestion()">
+            <input id="submitbtn" name="submit" type="button" value="Submit" onclick="addQuestion()">
+            <input id="nxtbtn" name="next" type="button" value="Next" onclick="nxtQuestion()">
+            <input id="resetbtn" name="reset" type="button" value="Play Again" onclick="resetQuestion()">
         </form>
 
     </div>
 </body>
-<!-- // Footer & contact info -->
-<footer>
-    <div>
-        <h2>Made by John Lee</h2>
-        <!-- Social media and contact links -->
-        <div class="contact-info">
-            <p>400030428</p>
-            <p>leej91</p>
-            <a href="mailto:leej91@mcmaster.ca">E-Mail</a>
-            <p>Copyright 2020 by John Lee</p>
-        </div>
-    </div>
-</footer>
 
 
 </html>
